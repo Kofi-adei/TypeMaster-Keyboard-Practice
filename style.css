@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Barlow;
+    margin: 2vw 8vw;
+}
+
+p {
+    color: var(--color-4);
+}
+
+:root {
+    --color-1: #F16718;
+    --color-2: #FF9B62;
+    --color-3: #162542;
+    --color-4: #7B8BAD;
+    --color-5: #E8EFF2;
+    --color-6: #fff;
+
+}
+
+.menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu h5 {
+    width: 20%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    border-radius: 7px;
+    color: var(--color-3);
+    background-color: var(--color-5);
+}
+
+.menu h5:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--color-3);
+}
+
+.about-keyboard {
+    width: 100%;
+    height: 1200px;
+    display: grid;
+    grid-template-areas: "a a a b b b"
+                         "c d d d e e";
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 49% 49%;
+    grid-gap: 2%;
+    margin-top: 3%;
+}
+
+[class^="block-"] {
+    border-radius: 20px;
+}
+
+.block-1 {
+    grid-area: a;
+    display: flex;
+    align-items: center;
+}
+
+.intro {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro span {
+    display: block;
+    margin-top: -3.5%;
+}
+
+.intro h1 {
+    font-size: 4vw;
+    font-weight: 800;
+    color: var(--color-3);
+    text-transform: uppercase;
+}
+
+.intro p {
+    width: 80%;
+    font-size: 1.2em;
+}
+
+.buttons {
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+#order-button-orange, #release-date {
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+
+#order-button-orange {
+    border-radius: 6px;
+    color: var(--color-6);
+    background-color: var(--color-1);
+}
+
+#order-button-orange:hover {
+    cursor: pointer;
+    background-color: var(--color-2);
+}
+
+#release-date {
+    color: var(--color-4);
+    font-weight: 700;
+}
+
+.block-2 {
+    grid-area: b;
+    background: url("./assets/desktop/image-keyboard.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.block-3 {
+    grid-area: c;
+    background: url("./assets/desktop/image-phone-and-keyboard.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(22, 92%, 52%, 0.75);
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.block-4 {
+    grid-area: d;
+    background: url("./assets/desktop/image-glass-and-keyboard.jpg");
+    background-size: 100% 100%;
+}
+
+.block-5 {
+    grid-area: e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block-5-text {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block-5-text h3 {
+    color: var(--color-3);
+    font-size: 2.5vw;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.block-5-text {
+    font-size: 1.2em;
+}
+
+.block-5 span {
+    display: block;
+    margin-top: -3%;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5%;
+    width: 100%;
+    height: 350px;
+    margin: 10% 0%;
+}
+
+.features span {
+    display: block;
+}
+
+.features p {
+    font-size: 1.1em;
+}
+
+[class^="box-"] {
+    width: calc(100% / 4.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.feature-icon {
+    width: 25%;
+    height: 18%;
+    border-radius: 12px;
+    padding: 5%;
+    background-color: var(--color-1);
+}
+
+.feature-heading {
+    color: var(--color-3);
+    font-size: 1.8vw;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    height: 60px;
+    margin-top: 120px
+}
+
+footer span {
+    font-weight: 600;
+}
+
+@media (max-width: 770px) {
+    html {
+        margin: 3vw;
+    }
+
+    .menu h5 {
+        width: 30%;
+    }
+
+    .about-keyboard {
+        height: 810px;
+        grid-template-areas: "a a a b b b"
+                             "c c d d d d"
+                             "e e e e e e";
+        grid-template-rows: repeat(3, 32%);
+    }
+
+    .intro {
+        height: 90%;
+    }
+
+    .intro h1 {
+        font-size: 5.5vw;
+    }
+
+    .intro p {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .buttons {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    #order-button-orange, #release-date {
+        width: 48%;
+    }
+
+    .block-2 {
+        width: 115%;
+        position: relative;
+        left: 6%;
+    }
+
+    .block-5-text {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .block-5-text h3 {
+        width: 28%;
+        font-size: 4.5vw;
+    }
+
+    .block-5-text p {
+        width: 60%;
+        font-size: 0.9em;
+    }
+
+    .features {
+        height: 650px;
+        gap: 1%;
+    }
+
+    .features p {
+        width: 95%;
+    }
+
+    .feature-icon {
+        width: 25%;
+        padding: 5% 8%;
+    }
+
+    .feature-heading {
+        font-size: 3.5vw;
+    }
+
+    [class^="box-"] {
+        width: 49.5%;
+    }
+}
+
+@media (max-width: 460px) {
+    .about-keyboard {
+        height: 1400px;
+        grid-template-areas: "a a a a a a"
+                             "b b b b b b"
+                             "c c d d d d"
+                             "e e e e e e";
+        grid-template-rows: repeat(4, 23.5%);
+    }
+
+    .intro h1 {
+        font-size: 14vw;
+    }
+
+    .block-2 {
+        left: 0%;
+    }
+
+    .block-3 {
+        width: 110%;
+        position: relative;
+        right: 25%;
+    }
+
+    .block-5-text {
+        height: 65%;
+        flex-direction: column;
+    }
+
+    .block-5-text h3 {
+        width: 50%;
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .block-5-text p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features {
+        height: 1200px;
+        gap: 2%;
+        text-align: center;
+    }
+
+    .feature-icon {
+        width: 15%;
+        height: 20%;
+        padding: 3% 4%;
+    }
+
+    [class^="box-"] {
+        width: 100%;
+        align-items: center;
+    }
+}
